@@ -3,22 +3,25 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <properties>
+        <maven.compiler.source>19</maven.compiler.source>
+        <maven.compiler.target>19</maven.compiler.target>
+    </properties>
     <parent>
         <groupId>wbidp.oskari</groupId>
         <artifactId>oskari-extension</artifactId>
-        <version>1.1</version>
+        <version>1.23.0</version>
     </parent>
     <artifactId>server-extension</artifactId>
 
     <dependencies>
-
         <dependency>
-            <groupId>fi.nls.oskari.service</groupId>
-            <artifactId>oskari-control-base</artifactId>
+            <groupId>org.oskari</groupId>
+            <artifactId>control-base</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>fi.nls.oskari</groupId>
+            <groupId>org.oskari</groupId>
             <artifactId>download-basket</artifactId>
             <version>${oskari.version}</version>
         </dependency>
@@ -27,6 +30,16 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+            <version>4.4.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.1</version>
         </dependency>
 
     </dependencies>
